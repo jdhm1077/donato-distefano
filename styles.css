@@ -188,16 +188,16 @@ section[id] { scroll-margin-top: var(--nav-h); }
 }
 .stages-inner span {
   font-family: var(--ff-sans);
-  font-size: 0.62rem;
+  font-size: 0.85rem;
   font-weight: 400;
-  letter-spacing: 0.2em;
+  letter-spacing: 0.16em;
   text-transform: uppercase;
-  color: rgba(255,255,255,0.45);
+  color: var(--gold);
   padding: 0.3rem 1.4rem;
   white-space: nowrap;
 }
 .stages-inner .dot {
-  color: var(--gold);
+  color: rgba(184,150,90,0.4);
   font-size: 0.9rem;
   padding: 0;
   line-height: 1;
