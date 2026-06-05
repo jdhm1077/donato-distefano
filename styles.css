@@ -674,6 +674,192 @@ section[id] { scroll-margin-top: var(--nav-h); }
   border-radius: 4px;
 }
 
+/* ─── STUDENT INTAKE FORM ─── */
+.intake-section {
+  padding: 6rem 3rem;
+  background: var(--white);
+  border-top: 1px solid #e8e3dc;
+}
+.intake-heading {
+  font-family: var(--ff-serif);
+  font-size: clamp(2rem, 3.5vw, 3rem);
+  font-weight: 400;
+  color: var(--black);
+  letter-spacing: 0.02em;
+  line-height: 1.1;
+  margin-bottom: 1rem;
+}
+.intake-subtitle {
+  font-family: var(--ff-sans);
+  font-size: 0.92rem;
+  font-weight: 300;
+  color: var(--grey);
+  line-height: 1.8;
+  margin-bottom: 3.5rem;
+  max-width: 620px;
+}
+.intake-form { max-width: 780px; }
+
+/* Section dividers A–H */
+.intake-part {
+  padding-top: 2.5rem;
+  margin-bottom: 2rem;
+  border-top: 1px solid rgba(184,150,90,0.3);
+}
+.intake-form > .intake-part:first-of-type {
+  border-top: none;
+  padding-top: 0;
+}
+.intake-part-label {
+  font-family: var(--ff-sans);
+  font-size: 0.75rem;
+  font-weight: 500;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--gold);
+}
+
+/* Field label overrides */
+.intake-form .form-field label {
+  font-size: 0.75rem;
+  color: #888;
+  letter-spacing: 0.12em;
+}
+
+/* Input / textarea / select — underline only, #C8C0B5 */
+.intake-form .form-field input,
+.intake-form .form-field textarea,
+.intake-form .form-field select {
+  font-family: var(--ff-sans);
+  font-size: 0.92rem;
+  font-weight: 300;
+  color: var(--black);
+  background: transparent;
+  border: none;
+  border-bottom: 1px solid #C8C0B5;
+  padding: 0.7rem 0;
+  outline: none;
+  transition: border-color 0.2s;
+  width: 100%;
+  appearance: none;
+  -webkit-appearance: none;
+  border-radius: 0;
+  resize: none;
+}
+.intake-form .form-field input::placeholder,
+.intake-form .form-field textarea::placeholder { color: #ccc; font-style: italic; }
+.intake-form .form-field input:focus,
+.intake-form .form-field textarea:focus,
+.intake-form .form-field select:focus { border-bottom-color: var(--gold); }
+
+/* Custom select arrow */
+.select-wrap { position: relative; }
+.select-wrap::after {
+  content: '▾';
+  position: absolute;
+  right: 0;
+  bottom: 0.75rem;
+  font-size: 0.8rem;
+  color: #aaa;
+  pointer-events: none;
+  line-height: 1;
+}
+
+/* Annotation tags (optional / strongly recommended) */
+.field-note {
+  font-family: var(--ff-sans);
+  font-size: 0.62rem;
+  font-weight: 400;
+  font-style: italic;
+  color: #aaa;
+  letter-spacing: 0.04em;
+  text-transform: none;
+  margin-left: 0.35rem;
+}
+
+/* Rating buttons */
+.rating-row {
+  display: flex;
+  gap: 0.45rem;
+  flex-wrap: wrap;
+  padding-top: 0.75rem;
+}
+.rating-btn {
+  width: 42px;
+  height: 42px;
+  border: 1px solid var(--gold);
+  background: transparent;
+  color: var(--gold);
+  font-family: var(--ff-sans);
+  font-size: 0.82rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background 0.18s, color 0.18s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+.rating-btn:hover { background: rgba(184,150,90,0.12); }
+.rating-btn.active { background: var(--gold); color: white; }
+
+/* Consent checkboxes */
+.intake-checkbox {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  margin-bottom: 1.25rem;
+}
+.intake-checkbox input[type="checkbox"] {
+  flex-shrink: 0;
+  width: 17px;
+  height: 17px;
+  accent-color: var(--gold);
+  margin-top: 3px;
+  cursor: pointer;
+  border: 1px solid var(--gold);
+}
+.intake-checkbox label {
+  font-family: var(--ff-sans);
+  font-size: 0.88rem;
+  font-weight: 300;
+  color: var(--grey);
+  line-height: 1.65;
+  cursor: pointer;
+  text-transform: none;
+  letter-spacing: 0;
+}
+
+/* Submit button */
+.btn-intake-submit {
+  display: block;
+  width: 100%;
+  font-family: var(--ff-sans);
+  font-size: 0.72rem;
+  font-weight: 500;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  padding: 1.15rem 2rem;
+  background: var(--gold);
+  color: white;
+  border: none;
+  cursor: pointer;
+  transition: background 0.22s;
+  margin-top: 2.5rem;
+}
+.btn-intake-submit:hover { background: var(--gold-dark); }
+
+/* Privacy note */
+.intake-privacy-note {
+  font-family: var(--ff-sans);
+  font-size: 0.72rem;
+  font-weight: 300;
+  color: #aaa;
+  line-height: 1.65;
+  margin-top: 1.2rem;
+  text-align: center;
+}
+
 /* ─── RESPONSIVE — TABLET ─── */
 @media (max-width: 1024px) {
   .nav { padding: 0 2rem; }
@@ -716,4 +902,6 @@ section[id] { scroll-margin-top: var(--nav-h); }
   .footer-inner { grid-template-columns: 1fr; gap: 2rem; padding: 3rem 1.5rem 2rem; }
   .gallery-thumb { width: 64px; height: 44px; }
   .audio-grid { grid-template-columns: 1fr; }
+  .intake-section { padding: 4rem 1.5rem; }
+  .rating-btn { width: 36px; height: 36px; }
 }

@@ -265,6 +265,211 @@
   </div>
 </section>
 
+<!-- ═══ STUDENT INTAKE FORM ═══ -->
+<section class="intake-section" id="intake">
+  <div class="section-container">
+    <span class="section-label">Student Intake</span>
+    <h2 class="intake-heading">Begin Your Study with Donato</h2>
+    <p class="intake-subtitle">Please complete this form before your first session. The more detail you share, the better Donato can tailor the work to your voice and goals.</p>
+
+    <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST" class="intake-form">
+
+      <!-- A — PERSONAL INFORMATION -->
+      <div class="intake-part">
+        <span class="intake-part-label">A &mdash; Personal Information</span>
+      </div>
+      <div class="form-row">
+        <div class="form-field">
+          <label for="if-first-name">First Name</label>
+          <input type="text" id="if-first-name" name="first_name" required>
+        </div>
+        <div class="form-field">
+          <label for="if-last-name">Last Name</label>
+          <input type="text" id="if-last-name" name="last_name" required>
+        </div>
+      </div>
+      <div class="form-row">
+        <div class="form-field">
+          <label for="if-email">Email</label>
+          <input type="email" id="if-email" name="email" required>
+        </div>
+        <div class="form-field">
+          <label for="if-phone">Phone</label>
+          <input type="tel" id="if-phone" name="phone">
+        </div>
+      </div>
+      <div class="form-row">
+        <div class="form-field">
+          <label for="if-dob">Date of Birth</label>
+          <input type="text" id="if-dob" name="date_of_birth" placeholder="DD / MM / YYYY">
+        </div>
+        <div class="form-field">
+          <label for="if-country">Country of Residence</label>
+          <input type="text" id="if-country" name="country">
+        </div>
+      </div>
+
+      <!-- B — YOUR VOICE -->
+      <div class="intake-part">
+        <span class="intake-part-label">B &mdash; Your Voice</span>
+      </div>
+      <div class="form-row">
+        <div class="form-field">
+          <label for="if-voice-type">Voice Type</label>
+          <div class="select-wrap">
+            <select id="if-voice-type" name="voice_type" required>
+              <option value="" disabled selected></option>
+              <option>Soprano</option>
+              <option>Mezzo-soprano</option>
+              <option>Contralto</option>
+              <option>Tenor</option>
+              <option>Baritone</option>
+              <option>Bass-baritone</option>
+              <option>Bass</option>
+            </select>
+          </div>
+        </div>
+        <div class="form-field">
+          <label for="if-training">Years of Formal Training</label>
+          <div class="select-wrap">
+            <select id="if-training" name="years_of_training" required>
+              <option value="" disabled selected></option>
+              <option>Less than 1 year</option>
+              <option>1–3 years</option>
+              <option>3–5 years</option>
+              <option>5–10 years</option>
+              <option>10+ years</option>
+            </select>
+          </div>
+        </div>
+      </div>
+      <div class="form-field">
+        <label for="if-teachers">Previous Teachers or Institutions</label>
+        <textarea id="if-teachers" name="previous_teachers" rows="3"></textarea>
+      </div>
+      <div class="form-field">
+        <label for="if-roles">Roles or Repertoire Performed or Prepared <span class="field-note">optional</span></label>
+        <textarea id="if-roles" name="roles_performed" rows="3"></textarea>
+      </div>
+
+      <!-- C — LANGUAGES & REPERTOIRE -->
+      <div class="intake-part">
+        <span class="intake-part-label">C &mdash; Languages &amp; Repertoire</span>
+      </div>
+      <div class="form-field">
+        <label for="if-languages">Languages Sung and Diction Level</label>
+        <input type="text" id="if-languages" name="languages" placeholder="e.g. Italian — advanced, German — intermediate">
+      </div>
+      <div class="form-field">
+        <label for="if-repertoire">Repertoire Preferences</label>
+        <textarea id="if-repertoire" name="repertoire_preferences" rows="3"></textarea>
+      </div>
+
+      <!-- D — VOCAL HEALTH -->
+      <div class="intake-part">
+        <span class="intake-part-label">D &mdash; Vocal Health</span>
+      </div>
+      <div class="form-row">
+        <div class="form-field">
+          <label for="if-health">Current Vocal Health</label>
+          <div class="select-wrap">
+            <select id="if-health" name="vocal_health">
+              <option value="" disabled selected></option>
+              <option>Excellent — no issues</option>
+              <option>Good — minor fatigue occasionally</option>
+              <option>Fair — some persistent issues</option>
+              <option>Currently under treatment</option>
+            </select>
+          </div>
+        </div>
+        <div class="form-field"></div>
+      </div>
+      <div class="form-field">
+        <label for="if-vocal-issues">Vocal Issues or Medical History Relevant to Your Voice <span class="field-note">optional</span></label>
+        <textarea id="if-vocal-issues" name="vocal_issues" rows="3"></textarea>
+      </div>
+      <div class="form-field">
+        <label>Self-Assessment of Overall Vocal Technique</label>
+        <div class="rating-row">
+          <button type="button" class="rating-btn" data-val="1">1</button>
+          <button type="button" class="rating-btn" data-val="2">2</button>
+          <button type="button" class="rating-btn" data-val="3">3</button>
+          <button type="button" class="rating-btn" data-val="4">4</button>
+          <button type="button" class="rating-btn" data-val="5">5</button>
+          <button type="button" class="rating-btn" data-val="6">6</button>
+          <button type="button" class="rating-btn" data-val="7">7</button>
+          <button type="button" class="rating-btn" data-val="8">8</button>
+          <button type="button" class="rating-btn" data-val="9">9</button>
+          <button type="button" class="rating-btn" data-val="10">10</button>
+        </div>
+        <input type="hidden" name="vocal_technique_rating" id="rating-input">
+      </div>
+
+      <!-- E — GOALS -->
+      <div class="intake-part">
+        <span class="intake-part-label">E &mdash; Goals</span>
+      </div>
+      <div class="form-field">
+        <label for="if-main-goal">Main Professional Goal</label>
+        <input type="text" id="if-main-goal" name="main_professional_goal">
+      </div>
+      <div class="form-row">
+        <div class="form-field">
+          <label for="if-short-goals">Short-term Goals (6–12 months)</label>
+          <textarea id="if-short-goals" name="short_term_goals" rows="4"></textarea>
+        </div>
+        <div class="form-field">
+          <label for="if-long-goals">Long-term Goals (3–5 years)</label>
+          <textarea id="if-long-goals" name="long_term_goals" rows="4"></textarea>
+        </div>
+      </div>
+      <div class="form-field">
+        <label for="if-hoping">What Are You Hoping to Get From Working with Donato Specifically?</label>
+        <textarea id="if-hoping" name="hoping_to_get" rows="4"></textarea>
+      </div>
+
+      <!-- F — MATERIALS -->
+      <div class="intake-part">
+        <span class="intake-part-label">F &mdash; Materials</span>
+      </div>
+      <div class="form-field">
+        <label for="if-recording">Link to a Recording <span class="field-note">strongly recommended</span></label>
+        <input type="url" id="if-recording" name="recording_link" placeholder="https://">
+      </div>
+      <div class="form-field">
+        <label for="if-cv">Link to CV or Artistic Biography <span class="field-note">optional</span></label>
+        <input type="url" id="if-cv" name="cv_link" placeholder="https://">
+      </div>
+
+      <!-- G — ADDITIONAL NOTES -->
+      <div class="intake-part">
+        <span class="intake-part-label">G &mdash; Additional Notes</span>
+      </div>
+      <div class="form-field">
+        <label for="if-notes">Anything Else You Would Like Donato to Know</label>
+        <textarea id="if-notes" name="additional_notes" rows="4"></textarea>
+      </div>
+
+      <!-- H — CONSENT -->
+      <div class="intake-part">
+        <span class="intake-part-label">H &mdash; Consent</span>
+      </div>
+      <div class="intake-checkbox">
+        <input type="checkbox" id="if-consent-gdpr" name="consent_gdpr" value="yes" required>
+        <label for="if-consent-gdpr">I consent to my personal data being used for the purposes of vocal coaching and communication with Donato Di Stefano, in accordance with applicable privacy regulations (GDPR).</label>
+      </div>
+      <div class="intake-checkbox">
+        <input type="checkbox" id="if-consent-contact" name="consent_contact" value="yes" required>
+        <label for="if-consent-contact">I agree to be contacted by email or phone for follow-up regarding my inquiry or sessions.</label>
+      </div>
+
+      <button type="submit" class="btn-intake-submit">Submit Intake Form</button>
+      <p class="intake-privacy-note">Your data is handled in accordance with GDPR. Donato Di Stefano will never share your information with third parties.</p>
+
+    </form>
+  </div>
+</section>
+
 <!-- ═══ 11. FOOTER ═══ -->
 <footer class="footer">
   <div class="footer-inner">
@@ -341,6 +546,17 @@
     if (e.key === 'ArrowRight') window.galleryNav(1);
   });
 })();
+
+// Rating buttons
+document.querySelectorAll('.rating-btn').forEach(function (btn) {
+  btn.addEventListener('click', function () {
+    var val = this.dataset.val;
+    document.querySelectorAll('.rating-btn').forEach(function (b) {
+      b.classList.toggle('active', b.dataset.val === val);
+    });
+    document.getElementById('rating-input').value = val;
+  });
+});
 </script>
 </body>
 </html>
