@@ -54,7 +54,7 @@ section[id] { scroll-margin-top: var(--nav-h); }
 }
 .nav-logo {
   font-family: var(--ff-serif);
-  font-size: 1.2rem;
+  font-size: 1.4rem;
   font-weight: 500;
   color: var(--gold);
   letter-spacing: 0.04em;
@@ -390,16 +390,16 @@ section[id] { scroll-margin-top: var(--nav-h); }
 .quote-block blockquote {
   font-family: var(--ff-serif);
   font-style: italic;
-  font-size: clamp(1.5rem, 3vw, 2.25rem);
+  font-size: 3.2rem;
   font-weight: 300;
   color: white;
-  line-height: 1.55;
+  line-height: 1.45;
   margin-bottom: 1.5rem;
   letter-spacing: 0.02em;
 }
 .quote-block cite {
   font-family: var(--ff-sans);
-  font-size: 0.68rem;
+  font-size: 1rem;
   font-weight: 500;
   letter-spacing: 0.22em;
   text-transform: uppercase;
@@ -626,6 +626,47 @@ section[id] { scroll-margin-top: var(--nav-h); }
   color: rgba(255,255,255,0.18);
 }
 
+/* ─── AUDIO CARDS ─── */
+.audio-section-inner {
+  margin-top: 4rem;
+  padding-top: 3.5rem;
+  border-top: 1px solid #e2ddd7;
+}
+.audio-section-inner > .section-label { margin-bottom: 2rem; }
+.audio-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+}
+.audio-card {
+  background: var(--white);
+  border: 1px solid #e8e3dc;
+  border-radius: 4px;
+  padding: 1.5rem;
+  box-shadow: 0 2px 14px rgba(0,0,0,0.055);
+}
+.audio-title {
+  font-family: var(--ff-serif);
+  font-size: 1.2rem;
+  font-weight: 400;
+  color: var(--black);
+  letter-spacing: 0.01em;
+  line-height: 1.2;
+  margin-bottom: 0.35rem;
+}
+.audio-subtitle {
+  font-family: var(--ff-sans);
+  font-size: 0.85rem;
+  font-weight: 300;
+  color: var(--grey);
+  margin-bottom: 1.2rem;
+}
+.audio-card iframe {
+  width: 100%;
+  display: block;
+  border-radius: 4px;
+}
+
 /* ─── RESPONSIVE — TABLET ─── */
 @media (max-width: 1024px) {
   .nav { padding: 0 2rem; }
@@ -669,4 +710,5 @@ section[id] { scroll-margin-top: var(--nav-h); }
   .form-row { grid-template-columns: 1fr; gap: 0; }
   .footer-inner { grid-template-columns: 1fr; gap: 2rem; padding: 3rem 1.5rem 2rem; }
   .gallery-thumb { width: 64px; height: 44px; }
+  .audio-grid { grid-template-columns: 1fr; }
 }
