@@ -336,6 +336,7 @@ section[id] { scroll-margin-top: var(--nav-h); }
   position: relative;
   overflow: hidden;
   min-height: 500px;
+  align-self: stretch;
 }
 .about-photo img {
   position: absolute;
@@ -343,7 +344,7 @@ section[id] { scroll-margin-top: var(--nav-h); }
   width: 100%;
   height: 100%;
   object-fit: cover;
-  object-position: top center;
+  object-position: center top;
   display: block;
 }
 .about-content {
