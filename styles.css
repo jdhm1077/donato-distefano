@@ -188,7 +188,7 @@ section[id] { scroll-margin-top: var(--nav-h); }
   display: flex;
   width: max-content;
   align-items: center;
-  animation: marquee 30s linear infinite;
+  animation: marquee 80s linear infinite;
   white-space: nowrap;
 }
 .stages-track:hover { animation-play-state: paused; }
@@ -631,6 +631,91 @@ section[id] { scroll-margin-top: var(--nav-h); }
   font-size: 0.68rem;
   letter-spacing: 0.08em;
   color: rgba(255,255,255,0.18);
+}
+
+/* ─── CAREER HIGHLIGHTS & DISCOGRAPHY ─── */
+.career-highlights,
+.discography-section {
+  margin-top: 2.5rem;
+  padding-top: 2rem;
+  border-top: 1px solid #e2ddd7;
+}
+.highlights-heading {
+  font-family: var(--ff-serif);
+  font-size: 1.4rem;
+  font-weight: 400;
+  color: var(--black);
+  letter-spacing: 0.02em;
+  line-height: 1.2;
+  margin-bottom: 1.25rem;
+}
+.highlights-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+}
+.highlights-list li {
+  font-family: var(--ff-sans);
+  font-size: 0.88rem;
+  font-weight: 300;
+  color: var(--grey);
+  line-height: 1.65;
+  padding: 0.75rem 0 0.75rem 1.1rem;
+  border-left: 2px solid var(--gold);
+  border-bottom: 1px solid #f0ece7;
+}
+.highlights-list li:last-child { border-bottom: none; }
+.highlights-list li em { color: var(--black); font-style: italic; }
+
+.discography-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+}
+.discography-list li {
+  font-family: var(--ff-sans);
+  font-size: 0.9rem;
+  font-weight: 300;
+  color: var(--grey);
+  line-height: 1.65;
+  padding: 0.65rem 0;
+  border-bottom: 1px solid #f0ece7;
+}
+.discography-list li:last-child { border-bottom: none; }
+.discography-list li em { color: var(--black); font-style: italic; }
+.award-note {
+  font-family: var(--ff-serif);
+  font-style: italic;
+  font-size: 0.9rem;
+  color: var(--gold);
+  margin-top: 1.25rem;
+  line-height: 1.65;
+}
+
+/* ─── CONDUCTORS & DIRECTORS ─── */
+.collab-columns {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  margin-top: 2.5rem;
+  padding-top: 2rem;
+  border-top: 1px solid #e2ddd7;
+}
+.collab-col .section-label { margin-bottom: 1rem; }
+.collab-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.45rem;
+}
+.collab-list li {
+  font-family: var(--ff-serif);
+  font-style: italic;
+  font-size: 0.95rem;
+  font-weight: 300;
+  color: var(--black);
+  letter-spacing: 0.01em;
+  line-height: 1.45;
 }
 
 /* ─── AUDIO CARDS ─── */
