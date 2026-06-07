@@ -104,8 +104,9 @@ section[id] { scroll-margin-top: var(--nav-h); }
   color: white;
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: flex-end;
   max-width: 1100px;
+  padding-bottom: 4rem;
 }
 .hero-name {
   font-family: var(--ff-serif);
