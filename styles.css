@@ -104,13 +104,14 @@ section[id] { scroll-margin-top: var(--nav-h); }
   color: white;
   display: flex;
   flex-direction: column;
-  align-items: flex-end;
+  align-items: center;
+  text-align: center;
   max-width: 1100px;
   padding-bottom: 4rem;
 }
 .hero-name {
   font-family: var(--ff-serif);
-  font-size: clamp(3rem, 9.5vw, 10rem);
+  font-size: clamp(3rem, 7vw, 8rem);
   font-weight: 300;
   letter-spacing: 0.06em;
   line-height: 1;
