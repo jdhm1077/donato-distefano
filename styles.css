@@ -419,23 +419,39 @@ section[id] { scroll-margin-top: var(--nav-h); }
 
 /* ─── CTA SECTION ─── */
 .cta-section {
-  padding: 7rem 2rem;
+  padding: 4.5rem 2rem;
   background: var(--white);
   text-align: center;
 }
 .cta-section .section-label {
-  margin-bottom: 1.2rem;
+  margin-bottom: 1.5rem;
   display: block;
   text-align: center;
 }
-.cta-section h2 {
+.press-quote-block {
+  max-width: 680px;
+  margin: 0 auto;
+}
+.press-quote {
   font-family: var(--ff-serif);
-  font-size: clamp(1.75rem, 3.5vw, 2.75rem);
+  font-style: italic;
+  font-size: clamp(1.9rem, 3.5vw, 3rem);
   font-weight: 300;
   color: var(--black);
-  line-height: 1.35;
-  margin-bottom: 2.5rem;
+  line-height: 1.45;
   letter-spacing: 0.02em;
+  margin-bottom: 1.25rem;
+}
+.press-cite {
+  display: block;
+  font-family: var(--ff-sans);
+  font-size: 0.65rem;
+  font-weight: 500;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--gold);
+  font-style: normal;
+  line-height: 1.7;
 }
 
 /* ─── MEDIA SECTION ─── */
@@ -982,7 +998,7 @@ section[id] { scroll-margin-top: var(--nav-h); }
   .curriculum-grid { grid-template-columns: 1fr 1fr; }
   .about-content { padding: 3rem 1.5rem; }
   .roles-grid { grid-template-columns: 1fr; }
-  .cta-section { padding: 5rem 1.5rem; }
+  .cta-section { padding: 3rem 1.5rem; }
   .media-section { padding: 4rem 1.5rem; }
   .video-grid { grid-template-columns: 1fr; }
   .contact-section { padding: 4rem 1.5rem; }
