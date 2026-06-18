@@ -1012,6 +1012,30 @@ section[id] { scroll-margin-top: var(--nav-h); }
   .management-agents { flex-direction: column; gap: 2rem; align-items: center; }
 }
 
+/* ─── GALLERY PAGE ─── */
+.gallery-page-section {
+  padding: 4rem 3rem 5rem;
+  background: var(--white);
+}
+.gallery-page-section.first-gallery {
+  padding-top: calc(var(--nav-h) + 4rem);
+}
+.gallery-page-section + .gallery-page-section {
+  border-top: 1px solid #e2ddd7;
+}
+.gallery-page-section .gallery-wrapper {
+  margin-bottom: 1.25rem;
+}
+.gallery-caption {
+  font-family: var(--ff-serif);
+  font-style: italic;
+  font-size: 1rem;
+  font-weight: 300;
+  color: var(--grey);
+  letter-spacing: 0.03em;
+  margin-top: 0.25rem;
+}
+
 /* ─── ARTIST MANAGEMENT PAGE ─── */
 .management-section {
   display: flex;

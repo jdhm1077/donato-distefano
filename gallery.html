@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gallery — Donato Di Stefano</title>
+  <meta name="description" content="Photo gallery — behind the scenes and masterclass photos of Donato Di Stefano, Italian bass and vocal mentor.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<!-- ═══ NAV ═══ -->
+<nav class="nav">
+  <a href="index.html" class="nav-logo">Donato Di Stefano</a>
+  <ul class="nav-links">
+    <li><a href="index.html#about">About</a></li>
+    <li><a href="index.html#curriculum">Curriculum</a></li>
+    <li><a href="index.html#media">Media</a></li>
+    <li><a href="gallery.html">Gallery</a></li>
+    <li><a href="contact.html">Contact</a></li>
+  </ul>
+</nav>
+
+<!-- ═══ CAROUSEL 1 — AMICI ═══ -->
+<section class="gallery-page-section first-gallery">
+  <div class="section-container">
+    <span class="section-label">Gallery</span>
+    <h2 class="section-title">Amici</h2>
+    <div class="gallery-wrapper">
+      <div class="gallery-main">
+        <img id="amici-img" src="images/photo-02.jpg" alt="Amici">
+        <button class="gallery-arrow gallery-prev" onclick="navAmici(-1)" aria-label="Previous photo">&#8592;</button>
+        <button class="gallery-arrow gallery-next" onclick="navAmici(1)" aria-label="Next photo">&#8594;</button>
+        <div class="gallery-counter"><span id="amici-current">1</span> of 11</div>
+      </div>
+      <div class="gallery-thumbs" id="amici-thumbs"></div>
+    </div>
+    <p class="gallery-caption">Behind the Scenes</p>
+  </div>
+</section>
+
+<!-- ═══ CAROUSEL 2 — MASTERCLASS ═══ -->
+<section class="gallery-page-section">
+  <div class="section-container">
+    <h2 class="section-title">Masterclass</h2>
+    <div class="gallery-wrapper">
+      <div class="gallery-main">
+        <img id="masterclass-img" src="images/photo-09.jpg" alt="Masterclass">
+        <button class="gallery-arrow gallery-prev" onclick="navMasterclass(-1)" aria-label="Previous photo">&#8592;</button>
+        <button class="gallery-arrow gallery-next" onclick="navMasterclass(1)" aria-label="Next photo">&#8594;</button>
+        <div class="gallery-counter"><span id="masterclass-current">1</span> of 1</div>
+      </div>
+      <div class="gallery-thumbs" id="masterclass-thumbs"></div>
+    </div>
+    <p class="gallery-caption">Working with Donato</p>
+  </div>
+</section>
+
+<!-- ═══ FOOTER ═══ -->
+<footer class="footer">
+  <div class="footer-inner">
+    <div class="footer-col">
+      <div class="footer-name">Donato Di Stefano</div>
+      <p>Italian Bass &amp; Vocal Mentor</p>
+    </div>
+    <div class="footer-col">
+      <h4>Navigation</h4>
+      <ul>
+        <li><a href="index.html#about">About</a></li>
+        <li><a href="index.html#curriculum">Curriculum</a></li>
+        <li><a href="index.html#media">Media</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Contact</h4>
+      <p>Artist Management.</p>
+      <a href="contact.html" class="btn btn-gold" style="margin-top:1.5rem; display:inline-block">Get in Touch</a>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>&copy; 2026 Donato Di Stefano. All rights reserved.</p>
+  </div>
+</footer>
+
+<!-- ═══ CAROUSEL SCRIPTS ═══ -->
+<script>
+function initCarousel(cfg) {
+  var photos  = cfg.photos;
+  var total   = photos.length;
+  var current = 0;
+  var imgEl     = document.getElementById(cfg.imgId);
+  var counterEl = document.getElementById(cfg.counterId);
+  var thumbsEl  = document.getElementById(cfg.thumbsId);
+
+  function update() {
+    imgEl.style.opacity = '0';
+    setTimeout(function () {
+      imgEl.src = photos[current];
+      imgEl.style.opacity = '1';
+    }, 220);
+    counterEl.textContent = current + 1;
+    var thumbs = thumbsEl.querySelectorAll('.gallery-thumb');
+    thumbs.forEach(function (t, i) { t.classList.toggle('active', i === current); });
+    if (thumbs[current]) {
+      thumbs[current].scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'center' });
+    }
+  }
+
+  photos.forEach(function (src, i) {
+    var thumb = document.createElement('img');
+    thumb.src = src;
+    thumb.className = 'gallery-thumb' + (i === 0 ? ' active' : '');
+    thumb.alt = 'Photo ' + (i + 1);
+    thumb.loading = 'lazy';
+    thumb.onclick = function () { current = i; update(); };
+    thumbsEl.appendChild(thumb);
+  });
+
+  return {
+    nav: function (dir) {
+      current = (current + dir + total) % total;
+      update();
+    }
+  };
+}
+
+var _amici = initCarousel({
+  photos: [
+    'images/photo-02.jpg',
+    'images/photo-10.jpg',
+    'images/photo-11.jpg',
+    'images/photo-12.jpg',
+    'images/photo-25.jpg',
+    'images/photo-26.jpg',
+    'images/photo-27.jpg',
+    'images/photo-31.jpg',
+    'images/photo-32.jpg',
+    'images/photo-33.jpg',
+    'images/photo-73.jpg'
+  ],
+  imgId:     'amici-img',
+  counterId: 'amici-current',
+  thumbsId:  'amici-thumbs'
+});
+
+var _masterclass = initCarousel({
+  photos: [
+    'images/photo-09.jpg'
+  ],
+  imgId:     'masterclass-img',
+  counterId: 'masterclass-current',
+  thumbsId:  'masterclass-thumbs'
+});
+
+function navAmici(dir)       { _amici.nav(dir); }
+function navMasterclass(dir) { _masterclass.nav(dir); }
+</script>
+</body>
+</html>
