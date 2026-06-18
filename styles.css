@@ -1008,17 +1008,16 @@ section[id] { scroll-margin-top: var(--nav-h); }
   .audio-grid { grid-template-columns: 1fr; }
   .intake-section { padding: 4rem 1.5rem; }
   .rating-btn { width: 36px; height: 36px; }
-  .management-section { padding: calc(var(--nav-h) + 2.5rem) 1.5rem 3.5rem; }
+  .management-section { padding: calc(var(--nav-h) + 1.5rem) 1.5rem 2.5rem; }
   .management-agents { flex-direction: column; gap: 2rem; align-items: center; }
 }
 
 /* ─── ARTIST MANAGEMENT PAGE ─── */
 .management-section {
-  min-height: calc(100vh - var(--nav-h));
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: calc(var(--nav-h) + 3.5rem) 2rem 4rem;
+  padding: calc(var(--nav-h) + 2.5rem) 2rem 3rem;
   background: var(--white);
   text-align: center;
 }
